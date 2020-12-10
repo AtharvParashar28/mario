@@ -1,0 +1,112 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+body{
+    background-color:white;
+    overflow: hidden;
+}
+.container{
+    border: 3px solid red;
+    background-image: url(background_game1.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100vw 95vh;
+    height: 100vh;
+    width: 100%;
+}
+.mario{
+    background-image: url(mario.png);
+    background-size: cover;
+    width: 75px;
+    height:90px;
+    position: absolute;
+    bottom: 33px;
+    left: 20px;
+}
+.dragon{
+    background-image: url(dragon.png);
+    background-size: cover;
+    width: 128px;
+    height: 100px;
+    position: absolute;
+    bottom:33px;
+    left: 45vw;
+}
+.gameover{
+    display: inline-block;
+    width: 300px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 70px;
+    margin: 1px 630px;
+    visibility: hidden;
+}
+#scoreboard{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+#yourscore{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    display: inline-block;
+    width: 400px;
+    margin: 1px 600px;
+    color:black;
+    align-items: center;
+    visibility: hidden;
+}
+#reload{
+    visibility: hidden;
+    font-size: 30px;
+    margin: 1px 675px;
+    width: 150px;
+    color:black;
+    background-color: wheat;
+    font-family: 'Texturina', serif;
+    border: 3px solid;
+    border-radius: 10px;
+}
+#name{
+    display: inline-block;
+    color:yellow;
+    opacity: 0.8;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    align-items: center;
+}
+#reload:hover{
+    background-color: white;
+}
+.animatemario{
+    animation: mario 0.7s linear ;
+}
+@keyframes mario{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 350px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.animatedragon{
+    animation: animatedragon 2s linear infinite;
+}
+@keyframes animatedragon{
+    0%{
+        bottom: 300px;
+        left : 100vw;
+    }
+    25%{
+        bottom: 100px;
+    }
+    50%{
+        bottom: 30px;
+    }
+    100%{
+        bottom: 170px;
+        left : -10vw;
+    }
+}
